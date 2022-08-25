@@ -13,7 +13,7 @@ def main():
         print(f'{LIMIT_NUMBER}以下の数を入力してください')
         return
 
-    for i in range(number):
+    for i in range(number + 1):
         if is_prime(i):
             print(i, end=' ')
 
