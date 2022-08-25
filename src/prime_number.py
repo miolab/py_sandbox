@@ -17,7 +17,7 @@ def main():
         if is_prime(i):
             print(i, end=' ')
 
-    print(f'\n{eratosthenes(number)}')
+    print(f'\n\nエラトストネスの篩パターン\n{eratosthenes(number)}')
 
 
 def is_prime(n: int) -> bool:
