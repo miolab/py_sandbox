@@ -39,7 +39,7 @@ def input_number() -> int:
     return input_number
 
 
-def eratosthenes(n: int):
+def eratosthenes(n: int) -> list[int]:
     if n <= 1:
         return []
     prime = [2]
