@@ -17,6 +17,8 @@ def main():
         if is_prime(i):
             print(i, end=' ')
 
+    print(f'\n{eratosthenes(number)}')
+
 
 def is_prime(n: int) -> bool:
     if n <= 1:
@@ -35,6 +37,21 @@ def input_number() -> int:
     )
 
     return input_number
+
+
+def eratosthenes(n: int):
+    if n <= 1:
+        return []
+    prime = [2]
+    limit = int(math.sqrt(n))
+
+    odd_array = [i + 1 for i in range(2, n, 2)]
+
+    while limit > odd_array[0]:
+        prime.append(odd_array[0])
+        odd_array = [j for j in odd_array if j % odd_array[0] != 0]
+
+    return prime + odd_array
 
 
 if __name__ == '__main__':
