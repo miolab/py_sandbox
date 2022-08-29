@@ -1,7 +1,7 @@
-LIMIT_NUMBER = 100
+LIMIT_NUMBER: int = 100
 
 
-def main():
+def main() -> None:
     for i in range(1, LIMIT_NUMBER + 1):
         if (i % 3 == 0) and (i % 4 == 0):
             print('FizzBuzz', end=' ')
