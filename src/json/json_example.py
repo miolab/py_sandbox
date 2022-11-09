@@ -13,10 +13,14 @@ fruits: dict[
 
 
 def gen_json_from_dict(dictionary: dict[str, Any]) -> str:
+    """Generate JSON from dict.
+    """
     return json.dumps(dictionary)
 
 
 def gen_dict_from_json(json_string: str) -> dict[str, Any]:
+    """Generate dict from JSON.
+    """
     return json.loads(json_string)
 
 
