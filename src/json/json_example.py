@@ -38,5 +38,17 @@ def gen_json(path: str) -> None:
         json.dump(fruits, f)
 
 
+def read_json(path: str) -> Any:
+    """Read JSON file.
+
+    - usage
+        - `read_json('src/json/sample.json')`
+    """
+    with open(path, 'r') as f:
+        return json.load(f)
+
+
 if __name__ == '__main__':
-    gen_json('src/json/sample.json')
+    sample_json = read_json('src/json/sample.json')
+
+    print(gen_json_from_dict(sample_json))
