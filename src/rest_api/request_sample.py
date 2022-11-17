@@ -3,7 +3,11 @@ import requests
 URL = 'https://jsonplaceholder.typicode.com/'
 
 
-def get() -> requests.models.Response:
+def main():
+    return _get()
+
+
+def _get() -> requests.models.Response:
     route = 'todos'
     payload = {
         'id': 1
@@ -16,7 +20,7 @@ def get() -> requests.models.Response:
 
 
 if __name__ == '__main__':
-    print(type(get()))
-    print(get().status_code)
-    print(get().text)
-    print(get().json())
+    print(type(main()))
+    print(main().status_code)
+    print(main().text)
+    print(main().json())
