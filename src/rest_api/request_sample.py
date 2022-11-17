@@ -1,16 +1,22 @@
 import requests
 
-URL = 'https://jsonplaceholder.typicode.com'
+URL = 'https://jsonplaceholder.typicode.com/'
 
-payload = {
-    'id': 1
-}
 
-r = requests.get(
-    f'{URL}/todos',
-    params=payload
-)
+def get() -> requests.models.Response:
+    route = 'todos'
+    payload = {
+        'id': 1
+    }
 
-print(r.status_code)
-print(r.text)
-print(r.json())
+    return requests.get(
+        f'{URL}{route}',
+        params=payload
+    )
+
+
+if __name__ == '__main__':
+    print(type(get()))
+    print(get().status_code)
+    print(get().text)
+    print(get().json())
