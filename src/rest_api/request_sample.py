@@ -8,7 +8,7 @@ def main():
 
 
 def _get() -> requests.models.Response:
-    route = 'todos'
+    route = 'posts'
     payload = {
         'id': 1
     }
