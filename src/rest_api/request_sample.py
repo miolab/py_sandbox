@@ -47,7 +47,8 @@ def _delete() -> requests.models.Response:
     }
     return requests.delete(
         f'{URL}{route}',
-        data=payload
+        data=payload,
+        timeout=3
     )
 
 
