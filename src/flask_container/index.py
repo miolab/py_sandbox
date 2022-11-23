@@ -9,7 +9,10 @@ app = Flask(__name__)
 
 def main():
     app.debug = True
-    app.run()
+    app.run(
+        host='127.0.0.1',
+        port='5000'
+    )
 
 
 @app.route('/')
