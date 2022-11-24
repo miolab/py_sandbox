@@ -16,8 +16,18 @@ def main():
 
 
 @app.route('/')
-def hello_world():
+def hello_world_top():
+    return 'Top'
+
+
+@app.route('/hello')
+def hello_world_detail():
     return 'Hello, World!'
+
+
+@app.route('/hello/<user_name>')
+def hello_user_name(user_name):
+    return f'Hello, {user_name}!'
 
 
 if __name__ == '__main__':
