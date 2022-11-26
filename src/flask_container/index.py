@@ -26,8 +26,12 @@ def hello_world_detail():
 
 
 @app.route('/hello/<user_name>')
-def hello_user_name(user_name):
-    return f'Hello, {user_name}!'
+def hello_user_name(user_name=None):
+    # return f'Hello, {user_name}!'
+    return render_template(
+        'index.html',
+        user_name=user_name
+    )
 
 
 if __name__ == '__main__':
