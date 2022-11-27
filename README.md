@@ -2,5 +2,5 @@
 
 ```sh
 ➜  python --version
-Python 3.11.0rc1
+Python 3.11.0
 ```
