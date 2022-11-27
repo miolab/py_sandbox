@@ -21,13 +21,8 @@ def hello_world_top():
 
 
 @app.route('/hello')
-def hello_world_detail():
-    return 'Hello, World!'
-
-
 @app.route('/hello/<user_name>')
 def hello_user_name(user_name=None):
-    # return f'Hello, {user_name}!'
     return render_template(
         'index.html',
         user_name=user_name
