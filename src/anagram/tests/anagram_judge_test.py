@@ -13,10 +13,20 @@ def test_is_anagram_type_error():
         AnagramJudgement.is_anagram(123, 321)
 
     with pytest.raises(TypeError):
-        AnagramJudgement.is_anagram('abc', 321)
-
-    with pytest.raises(TypeError):
         AnagramJudgement.is_anagram(321, 'abc')
 
     with pytest.raises(TypeError):
+        AnagramJudgement.is_anagram('abc', 321)
+
+    with pytest.raises(TypeError):
         AnagramJudgement.is_anagram(['a', 'b', 'c'], ['c', 'b', 'a'])
+
+def test_is_anagram_with_empty_strings():
+    with pytest.raises(ValueError):
+        AnagramJudgement.is_anagram('', '')
+
+    with pytest.raises(ValueError):
+        AnagramJudgement.is_anagram('', 'abc')
+
+    with pytest.raises(ValueError):
+        AnagramJudgement.is_anagram('abc', '')

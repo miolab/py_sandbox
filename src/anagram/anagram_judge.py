@@ -16,4 +16,7 @@ class AnagramJudgement:
         if not isinstance(str_1, str) or not isinstance(str_2, str):
             raise TypeError('All inputs must be Strings.')
 
+        if str_1 == "" or str_2 == "":
+            raise ValueError('Inputs must NOT be empty.')
+
         return sorted(str_1) == sorted(str_2)
