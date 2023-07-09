@@ -13,4 +13,7 @@ class AnagramJudgement:
         Returns:
         bool: True if the strings are anagrams, False otherwise
         """
+        if not isinstance(str_1, str) or not isinstance(str_2, str):
+            raise TypeError('All inputs must be Strings.')
+
         return sorted(str_1) == sorted(str_2)
