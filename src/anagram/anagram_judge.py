@@ -1,6 +1,5 @@
 class AnagramJudgement:
-    """A class used to check if two strings are anagrams.
-    """
+    """A class used to check if two strings are anagrams."""
 
     @staticmethod
     def is_anagram(str_1: str, str_2: str) -> bool:
@@ -14,9 +13,9 @@ class AnagramJudgement:
         bool: True if the strings are anagrams, False otherwise
         """
         if not isinstance(str_1, str) or not isinstance(str_2, str):
-            raise TypeError('All inputs must be Strings.')
+            raise TypeError("All inputs must be Strings.")
 
         if str_1 == "" or str_2 == "":
-            raise ValueError('Inputs must NOT be empty.')
+            raise ValueError("Inputs must NOT be empty.")
 
         return sorted(str_1) == sorted(str_2)

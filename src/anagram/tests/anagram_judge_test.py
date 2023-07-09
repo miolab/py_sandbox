@@ -3,9 +3,9 @@ from anagram_judge import AnagramJudgement
 
 
 def test_is_anagram():
-    assert AnagramJudgement.is_anagram('listen', 'silent') == True
-    assert AnagramJudgement.is_anagram('abcde', 'fghij') == False
-    assert AnagramJudgement.is_anagram('aaa', 'aaa') == True
+    assert AnagramJudgement.is_anagram("listen", "silent") == True
+    assert AnagramJudgement.is_anagram("abcde", "fghij") == False
+    assert AnagramJudgement.is_anagram("aaa", "aaa") == True
 
 
 def test_is_anagram_type_error():
@@ -13,20 +13,21 @@ def test_is_anagram_type_error():
         AnagramJudgement.is_anagram(123, 321)
 
     with pytest.raises(TypeError):
-        AnagramJudgement.is_anagram(321, 'abc')
+        AnagramJudgement.is_anagram(321, "abc")
 
     with pytest.raises(TypeError):
-        AnagramJudgement.is_anagram('abc', 321)
+        AnagramJudgement.is_anagram("abc", 321)
 
     with pytest.raises(TypeError):
-        AnagramJudgement.is_anagram(['a', 'b', 'c'], ['c', 'b', 'a'])
+        AnagramJudgement.is_anagram(["a", "b", "c"], ["c", "b", "a"])
+
 
 def test_is_anagram_with_empty_strings():
     with pytest.raises(ValueError):
-        AnagramJudgement.is_anagram('', '')
+        AnagramJudgement.is_anagram("", "")
 
     with pytest.raises(ValueError):
-        AnagramJudgement.is_anagram('', 'abc')
+        AnagramJudgement.is_anagram("", "abc")
 
     with pytest.raises(ValueError):
-        AnagramJudgement.is_anagram('abc', '')
+        AnagramJudgement.is_anagram("abc", "")
