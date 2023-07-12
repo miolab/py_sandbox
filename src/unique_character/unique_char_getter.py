@@ -12,6 +12,9 @@ class UniqueCharGetter:
         Returns:
         str: The first non-repeating character in the string. If all characters are repeating, returns an empty string.
         """
+        if not isinstance(characters, str):
+            raise TypeError("Input must be a string")
+
         frequency: dict[str, int] = {}
 
         for char in characters:
