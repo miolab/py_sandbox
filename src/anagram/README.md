@@ -17,5 +17,5 @@ False
 ## Test (pytest)
 
 ```sh
-➜  python -m test
+➜  python -m pytest
 ```
