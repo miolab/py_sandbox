@@ -1,17 +1,35 @@
 class StringSearchIndex:
-    TEXT = "Success is not final, failure is not fatal."
-    PATTERN = "fail"
+    @staticmethod
+    def brute_force_search_index(text: str, pattern: str) -> int:
+        """Searches for a substring within a string using the brute-force method.
 
-    def __init__(self):
-        self.main()
+        Args:
+        - text (str): The main string in which to search.
+        - pattern (str): The substring to search for.
 
-    def main(self):
-        print(self.brute_force_search_index(self.TEXT, self.PATTERN))
+        Returns:
+        - int: The starting index of the first occurrence of the pattern in the text.
+            If the pattern is not found, the function returns -1.
+        """
+        for i, _ in enumerate(text):
+            if i + len(pattern) > len(text):
+                break
 
-    def brute_force_search_index(self, text: str, pattern: str) -> int:
-        # return dummy index
-        return 1
+            is_match = True
+
+            for j, character in enumerate(pattern):
+                if text[i + j] != character:
+                    is_match = False
+                    break
+
+            if is_match:
+                return i
+
+        return -1
 
 
 if __name__ == "__main__":
-    StringSearchIndex()
+    result = StringSearchIndex.brute_force_search_index(
+        "Success is not final, failure is not fatal.", "fail"
+    )
+    print(result)
