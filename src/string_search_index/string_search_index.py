@@ -28,7 +28,7 @@ class StringSearchIndex:
         return -1
 
     @staticmethod
-    def boyer_moore_search(text: str, pattern: str) -> int:
+    def boyer_moore_search_index(text: str, pattern: str) -> int:
         """Searches for a substring within a string using the Boyer-Moore method.
 
         Args:
@@ -65,7 +65,7 @@ class StringSearchIndex:
 
 if __name__ == "__main__":
     # Sample usage
-    result = StringSearchIndex.boyer_moore_search(
+    result = StringSearchIndex.boyer_moore_search_index(
         "Success is not final, failure is not fatal.", "fail"
     )
     print(result)
